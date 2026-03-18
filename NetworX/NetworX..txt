@@ -1,0 +1,226 @@
+NetworX – modern, techy twist on “network"
+=====================================================================
+NetworX/
+│
+├── frontend/                   # All client-side files
+│   ├── index.html              # Home page
+│   ├── about.html              # About project / About us
+│   ├── login.html              # Login page
+│   ├── signup.html             # Signup page
+│   ├── profile.html            # User profile page
+│   ├── project-room.html       # Project collaboration room
+│   ├── feed.html               # Personalized feed page
+│   ├── notifications.html      # Notifications page
+│   │
+│   ├── css/                    # CSS files
+│   │   └── style.css           # Global styles
+│   │
+│   ├── js/                     # JavaScript files
+│   │   ├── main.js             # Core front-end logic
+│   │   ├── chat.js             # Real-time chat logic
+│   │   └── feed.js             # Feed update logic
+│   │
+│   └── assets/                 # Images, icons, logos
+│       ├── images/
+│       │    └── logo.png
+│       └── icons/
+│            └── chat-icon.svg
+│
+├── backend/                    # Server-side / API files
+│   ├── app.js / server.js      # Node.js/Express main file
+│   ├── routes/                 # API endpoints
+│   │    ├── auth.js            # Login/Signup APIs
+│   │    ├── profile.js         # User profile APIs
+│   │    ├── projects.js        # Project room APIs
+│   │    └── feed.js            # Feed APIs
+│   │
+│   ├── controllers/            # Business logic
+│   │    ├── authController.js
+│   │    ├── profileController.js
+│   │    ├── projectController.js
+│   │    └── feedController.js
+│   │
+│   ├── models/                 # Database models (MongoDB / SQL)
+│   │    ├── User.js
+│   │    ├── Project.js
+│   │    └── Notification.js
+│   │
+│   └── config/                 # Config files
+│        └── db.js              # Database connection
+│
+├── database/                   # Optional raw SQL / MongoDB schema
+│   ├── schema.sql              # SQL schema (if using SQL)
+│   └── seed.js                 # Seed database with test data
+│
+├── middleware/                 # Middleware for authentication, logging
+│   ├── authMiddleware.js
+│   └── errorHandler.js
+│
+├── utils/                      # Utility functions
+│   ├── validation.js           # Input validation
+│   └── helpers.js              # Helper functions
+│
+├── package.json                # Node.js dependencies
+├── package-lock.json
+└── README.md                   # Project overview, instructions
+
+---------------------------------------------------------
+# Full-Stack Functional Requirements (Languages / Frameworks):
+---------------------------------------------------------
+Frontend:
+- HTML5: structure pages
+- CSS3: styling
+- JavaScript: interactivity, DOM manipulation
+- Optional: Bootstrap / Tailwind CSS for faster styling
+
+Backend:
+- Node.js + Express.js: server and API routing
+- MongoDB / MySQL: database storage
+- JWT / OAuth: user authentication
+- Socket.io: real-time chat
+
+Additional Functions:
+1. User Auth: signup, login, password hashing
+2. Profile Management: view/edit skills, interests, projects
+3. AI Matchmaking: recommend collaborators (can use Python microservice or JS AI libraries)
+4. Project Rooms: create/join rooms, chat, file sharing
+5. Feed System: personalized updates, project activities
+6. Notifications: real-time alerts
+7. Analytics Dashboard: contribution stats, project progress charts
+8. Admin Panel: optional, manage users and projects
+
+---------------------------------------------------------
+Estimated Tech Stack:
+Frontend: HTML + CSS + JS (+Bootstrap/Tailwind)
+Backend: Node.js + Express
+Database: MongoDB or MySQL
+Realtime: Socket.io
+Authentication: JWT / OAuth
+AI/Logic: Python microservices or JS AI libraries
+================================================================================================================================================================
+NetworX – Project Development Document
+===========================
+
+Project Overview:
+----------------
+NetworX is a full-stack social-professional networking platform that connects users based on skills, projects, and AI-driven compatibility. It allows users to create/join project rooms, chat, share files, and track collaboration progress. The platform also includes personalized feeds, notifications, and analytics dashboards.
+
+---------------------------
+Development Algorithm & Step-by-Step Instructions
+---------------------------
+
+Step 0: Environment Setup
+-------------------------
+1. Install Node.js and npm.
+2. Install VS Code or any preferred IDE.
+3. Create the project folder: NetworX/
+4. Initialize Node project:
+   npm init -y
+5. Install dependencies:
+   npm install express mongoose bcrypt jsonwebtoken cors socket.io
+6. Optional dev tools: nodemon for automatic server restart.
+
+Step 1: Frontend Skeleton (HTML Only)
+--------------------------------------
+1. Create the following HTML pages in frontend/:
+   - index.html
+   - about.html
+   - login.html
+   - signup.html
+   - profile.html
+   - project-room.html
+   - feed.html
+   - notifications.html
+2. Use semantic HTML tags: <header>, <nav>, <section>, <footer>
+3. Link CSS file:
+   <link rel="stylesheet" href="css/style.css">
+4. Add placeholder images/icons in assets/images and assets/icons folders.
+
+Step 2: Frontend Styling & Layout
+---------------------------------
+1. Create css/style.css
+2. Add styling for:
+   - Navigation bar
+   - Buttons and links
+   - Forms and input fields
+   - Project cards and user profiles
+   - Feed and notifications layout
+3. Optional: Use Bootstrap or Tailwind CSS for faster responsive design.
+
+Step 3: Backend Setup
+----------------------
+1. Create backend/app.js or server.js
+2. Setup Express server:
+   - Enable JSON parsing
+   - Enable CORS
+3. Create folders:
+   - routes/ (for API routes)
+   - controllers/ (business logic)
+   - models/ (database schemas)
+   - middleware/ (authentication, error handling)
+   - config/ (database connection)
+4. Connect to MongoDB or MySQL.
+
+Step 4: Authentication System
+-----------------------------
+1. User signup API:
+   - Save user info with hashed password (bcrypt)
+2. User login API:
+   - Validate credentials
+   - Generate JWT for authentication
+3. Middleware:
+   - authMiddleware.js to protect routes
+
+Step 5: User Profiles & Skills
+-------------------------------
+1. Profile API: view/edit skills, interests, projects
+2. Store in database: User model
+3. Display profile data dynamically in profile.html
+
+Step 6: Project Rooms
+---------------------
+1. Project model: name, members, tasks, files
+2. Create project-room API:
+   - Create room
+   - Add/remove members
+   - Upload/download files
+3. Real-time chat with Socket.io
+
+Step 7: Feed & Notifications
+-----------------------------
+1. Feed API: personalized updates based on connections and projects
+2. Notification API: real-time alerts using Socket.io
+3. Display feed.html and notifications.html dynamically
+
+Step 8: AI Matchmaking (Optional)
+----------------------------------
+1. Recommend collaborators based on skill compatibility
+2. Can use Python microservice or JS AI libraries
+3. Calculate compatibility score and suggest matches in feed
+
+Step 9: Analytics Dashboard
+---------------------------
+1. Display:
+   - Contribution stats
+   - Project progress
+   - Team performance charts
+2. Use Chart.js or similar library for visualizations
+
+Step 10: Testing & Deployment
+------------------------------
+1. Test all APIs using Postman
+2. Test frontend pages in browser
+3. Deploy backend on Heroku / Render / Vercel
+4. Deploy frontend with static hosting (Netlify or Vercel)
+
+---------------------------
+Tech Stack Summary:
+---------------------------
+Frontend: HTML5, CSS3, JavaScript (optionally Bootstrap/Tailwind)  
+Backend: Node.js + Express  
+Database: MongoDB or MySQL  
+Realtime: Socket.io  
+Authentication: JWT / OAuth  
+AI/Logic: Python microservice or JS AI library (optional)
+
+===========================

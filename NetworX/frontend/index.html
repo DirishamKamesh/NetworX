@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetworX 🌐</title>
+    <link rel="icon" type="image/png" href="assets/icons/icon.png">
+    <!-- Main stylesheet for the site -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Site header with responsive navigation and theme toggle -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <a href="index.html">NetworX</a>
+            </div>
+
+            <nav class="site-nav" aria-label="Main Navigation">
+                <button id="mobileMenuBtn" class="mobile-menu-btn" aria-expanded="false" aria-controls="primaryNav">☰</button>
+                <ul id="primaryNav" class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="register.html">Sign Up</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="icon-btn" aria-pressed="false" title="Toggle dark/light">🌓</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero container">
+            <div class="hero-content animate">
+                <h1>Welcome to NetworX</h1>
+                <p class="lead">NetworX is a platform where professionals, students, and creators connect, collaborate, and grow together. Build your projects, share your ideas, and connect with like-minded individuals!</p>
+                <div class="hero-actions">
+                    <a class="btn primary" href="register.html">Get Started</a>
+                    <a class="btn ghost" href="#features">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-illustration float animate" aria-hidden="true">
+                <!-- Placeholder illustration area -->
+            </div>
+        </section>
+
+        <section id="features" class="features container">
+            <h2>Features</h2>
+            <div class="features-grid stagger">
+                <article>
+                    <h3>Create a Profile</h3>
+                    <p>Showcase your skills and experience to attract collaborators and employers.</p>
+                </article>
+                <article>
+                    <h3>Manage Projects</h3>
+                    <p>Create, edit and share project work with teams and contributors.</p>
+                </article>
+                <article>
+                    <h3>Connect</h3>
+                    <p>Find peers, mentors, and teammates to collaborate on ideas and projects.</p>
+                </article>
+                <article>
+                    <h3>Track Progress</h3>
+                    <p>Monitor milestones, tasks and achievements across projects.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="container">
+            <h2>Recent Projects</h2>
+            <p>Explore projects built by the community.</p>
+            <!-- A small form example to demonstrate validation and styles -->
+            <form id="newsletterForm" class="inline-form" action="#" method="POST">
+                <label for="email" class="visually-hidden">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@domain.com" required>
+                <button type="submit" class="btn primary">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 NetworX. All rights reserved.</p>
+            <a class="muted-link" href="contact.html">Contact Us</a>
+        </div>
+    </footer>
+
+    <!-- Main script for interactivity -->
+    <script src="js/script.js"></script>
+</body>
+</html>

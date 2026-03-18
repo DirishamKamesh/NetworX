@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile - NetworX</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="assets/icons/icon.png">
+</head>
+<body>
+    <section>
+        <h1> My Profile</h1>
+        <p>"View and edit your personal information, skills, and bio."</p>
+        <form action="profile_success.html" method="POST" enctype="multipart/form-data">
+    <!-- Profile Picture -->
+    <label for="profilePic">Profile Picture:</label><br>
+    <input type="file" id="profilePic" name="profilePic" accept="image/*"><br><br>
+
+    <!-- Name -->
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Your Full Name" required><br><br>
+
+    <!-- Username -->
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username" placeholder="Choose a username" required><br><br>
+
+    <!-- Bio -->
+    <label for="bio">Bio:</label><br>
+    <textarea id="bio" name="bio" placeholder="Tell us about yourself" rows="4" cols="50"></textarea><br><br>
+
+    <!-- Contact Info -->
+    <label for="contact">Contact Info:</label><br>
+    <input type="text" id="contact" name="contact" placeholder="Email or Phone Number"><br><br>
+
+    <!-- Submit Button -->
+    <button type="submit">Save Profile</button>
+  </form>
+    </section>
+    <section>
+        <h1>Recent Activity</h1><p>"See the latest projects and contributions you've made."</p>
+        <ul>
+            <li> Project A - Updated on 2024-06-10</li>
+            <li> Project B - Commented on 2024-06-09</li>
+            <li> Project C - Created on 2024-06-08</li>
+        </ul>
+        <button onclick="location.href='projects.html'">My projects</button>
+        <a href="contact.html">Contact Us</a>
+<footer>
+    <p>&copy; 2024 NetworX. All rights reserved.</p>   
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetworX 🌐</title>
+    <link rel="icon" type="image/png" href="assets/icons/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Create a NetworX Account</h1>
+    <p>"Sign up to join the community, create projects, and connect with others!"</p>
+    <h1>register</h1>
+    <form action="register_success.html" method="POST">
+    <!-- Full Name -->
+    <label for="fullname">Full Name:</label><br>
+    <input type="text" id="fullname" name="fullname" placeholder="Your Name" required><br><br>
+
+    <!-- Username -->
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username" placeholder="Choose a username" required><br><br>
+
+    <!-- Email -->
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required><br><br>
+
+    <!-- Password -->
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" placeholder="Enter password" required><br><br>
+
+    <!-- Confirm Password -->
+    <label for="confirm_password">Confirm Password:</label><br>
+    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm password" required><br><br>
+
+    <!-- Gender -->
+    <label>Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label><br><br>
+
+    <!-- Date of Birth -->
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob" required><br><br>
+
+    <!-- Submit Button -->
+    <button type="submit" onclick="location.href='dashboard.html'">Register</button>
+  </form>
+  <h2>Already exists ?</h2> <a href="login.html">Login Here</a>
+  <script src="js/script.js"></script>
+</body>
+</html>

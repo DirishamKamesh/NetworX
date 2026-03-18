@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetworX 🌐</title>
+        <link rel="icon" type="image/png" href="assets/icons/icon.png">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- Page-level scripts -->
+        <script src="js/script.js"></script>
+    <h1>Create a New Project</h1>
+    <p>"Fill in the details to start your new project and collaborate with others."</p>
+    
+    <form id="createProjectForm" action="/projects" method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="title">Project Title</label>
+            <input type="text" id="title" name="title" required maxlength="150" placeholder="Enter project title">
+        </div>
+
+        <div>
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="6" required placeholder="Describe your project"></textarea>
+        </div>
+
+        <div>
+            <label for="tags">Tags</label>
+            <input type="text" id="tags" name="tags" placeholder="e.g. javascript, node, ai — comma-separated">
+            <small>Separate tags with commas.</small>
+        </div>
+
+        <div>
+            <label for="attachment">File Upload (optional)</label>
+            <input type="file" id="attachment" name="attachment" accept=".zip,.pdf,.png,.jpg,.jpeg,.docx">
+            <small>Optional. Max file size enforced server-side.</small>
+        </div>
+
+        <div>
+            <button type="submit">Create Project</button>
+        </div>
+    </form>
+
+    
+</body>
+</html>
